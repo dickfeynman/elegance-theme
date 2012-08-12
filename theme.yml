@@ -1,0 +1,28 @@
+{
+  "stylesheets" : {
+    "default" : [
+      "custom.css",
+      "style.css"
+    ],
+   
+    "widgets" : {
+    }
+
+    
+  },
+
+  "javascripts" : {
+    "default" : [
+    ]
+  },
+  
+  "manifest" : {
+    "name" : "elegance",
+    "git-url" : "git://github.com/dickfeynman/elegance-theme.git"
+    "source-url" : "https://github.com/dickfeynman/elegance-theme"
+    "author" : {
+        "name" : "Sivaramakrishnan Swaminathan",
+        "website" : "http://sivaramakrishnan.wikidot.com/"
+        }
+  }
+}

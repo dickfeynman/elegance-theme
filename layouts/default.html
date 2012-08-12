@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <title>{{ page.title }}</title>
+  <meta charset="utf-8">
+  <link href="/rss.xml" rel="alternate" title="RSS" type="application/rss+xml" />
+
+  {{# page.description }}
+    <meta name="description" content="{{ . }}">
+  {{/ page.description }}
+    <meta name="author" content="{{ site.author.name }}">
+
+  {{{ assets }}} 
+  {{{ mathjax }}}
+</head>
+
+<body id="whole">
+  
+<div class="sidebar">
+  <h1><a href="/">{{ site.title }}</a></h1>
+  <span>{{ site.tagline }}</span>
+
+  <div class="followme">
+	<ul>
+	  <li><a href="http://twitter.com/{{ site.author.twitter }}">@{{ site.author.twitter }}</a></li>
+	  <li><a href="https://github.com/{{ site.author.github }}">github</a></li>
+	</ul>
+  </div>
+
+  <div class="nav">
+	<ul>
+		{{# site.navigation?to_pages }}
+			{{> pages_list }}
+		{{/ site.navigation?to_pages }}
+	  <li><a href="/rss.xml">rss feed</a></li>
+	</ul>
+  </div>
+
+  <div class="credits">
+	<ul>
+	  <li>&copy; {{site.author.name }} 2012</li>
+	  <li>With help from <a href="http://ruhoh.com">Ruhoh</a></li>
+	  <li>Themed inspired by <a href="http://github.com/natew/obtvse.git">Obtvse</a></li>
+	</ul>
+  </div>
+
+</div>
+
+<div id="container">
+	<div class="content" align="justify">
+	  {{{ content }}}
+	</div>
+</div>
+  
+</body>
+
+</html>
