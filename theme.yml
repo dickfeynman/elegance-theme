@@ -1,7 +1,6 @@
 {
   "stylesheets" : {
     "default" : [
-      "custom.css",
       "style.css"
     ],
    
