@@ -10,6 +10,6 @@ To use this theme, `git clone` or download the dinky folder into your themes dir
 
 In `config.yml` set:
 
-    theme: "dinky"
+    theme: "elegance"
     
 Then reload your development environment to see the changes.
