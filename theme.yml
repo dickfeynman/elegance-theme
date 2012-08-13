@@ -1,11 +1,10 @@
 {
   "stylesheets" : {
-    "default" : [
-      "style.css"
-    ],
+    "default" : "style.css",
    
     "widgets" : {
-    }
+       "google_prettify" : "twitter-bootstrap.css"
+   }
 
     
   },
