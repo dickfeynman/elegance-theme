@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="en-US">
 <head>
+  <!-- 
+  <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>   
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Voces' rel='stylesheet' type='text/css'>  
+  <link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/crimson" rel="stylesheet" type="text/css"/>  
+  <link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lora:700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Marmelad' rel='stylesheet' type='text/css'>
+  -->
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  
   <title>{{ page.title }}</title>
   <meta charset="utf-8">
   <link href="/rss.xml" rel="alternate" title="RSS" type="application/rss+xml" />
@@ -11,38 +22,49 @@
     <meta name="author" content="{{ site.author.name }}">
 
   {{{ assets }}} 
+
+
   {{{ mathjax }}}
+
 </head>
 
 <body id="whole">
   
 <div class="sidebar">
-  <h1><a href="/">{{ site.title }}</a></h1>
+  <h1><a href="{{ site.home_url }}">{{ site.title }}</a></h1>
+  <!--  <span><img src="{{ urls.theme_media }}/me.png" alt="" width="180" align="center"/></span> -->
+  
+  <img src="{{ urls.media }}/sw.png" alt="Hi!" width="150">
+  <!--<img src="/~siva/blog/assets/media/sw.png" alt="Hi!" width="150">-->
   <span>{{ site.tagline }}</span>
 
+  <!--
   <div class="followme">
 	<ul>
 	  <li><a href="http://twitter.com/{{ site.author.twitter }}">@{{ site.author.twitter }}</a></li>
 	  <li><a href="https://github.com/{{ site.author.github }}">github</a></li>
 	</ul>
   </div>
+  -->
 
   <div class="nav">
 	<ul>
 		{{# site.navigation?to_pages }}
 			{{> pages_list }}
 		{{/ site.navigation?to_pages }}
-	  <li><a href="/rss.xml">rss feed</a></li>
+		<li><a href="{{ site.home_url }}/rss.xml">Subscribe</a></li>
 	</ul>
   </div>
 
+  <!-- 
   <div class="credits">
 	<ul>
-	  <li>&copy; {{ site.author.name }} 2012</li>
+	  <li>&copy; {{site.author.name }} 2012 </li>
 	  <li>With help from <a href="http://ruhoh.com">Ruhoh</a></li>
-	  <li>Using the <a href="https://github.com/dickfeynman/elegance-theme">Elegance theme</a></li>
+	  <li>Themed inspired by <a href="http://github.com/natew/obtvse.git">Obtvse</a></li>
 	</ul>
   </div>
+  -->
 
 </div>
 
@@ -50,10 +72,19 @@
 	<div class="content" align="justify">
 	  {{{ content }}}
 	</div>
+
+	<!--
+	<div align="center"?
+	  <li>&copy; {{site.author.name }} 2012. </br>
+	  With help from <a href="http://ruhoh.com">Ruhoh</a>, Themed inspired by <a href="http://github.com/natew/obtvse.git">Obtvse</a>
+	</div>
+	-->
+
 </div>
-  
+
 </body>
 
 {{{ google_prettify }}}
+{{{ analytics }}}
 
 </html>
